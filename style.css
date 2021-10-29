@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+}
+
+.attractions-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 
+replaced with javascript function for exercise  */
+
+/* .image:hover{
+     opacity: 0.75;
+     border:8px solid;
+     border-image: linear-gradient(45deg, red, black) 1
+} */
