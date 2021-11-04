@@ -1,17 +1,79 @@
-body{
+body {
     text-align: center;
 }
 
-.attractions-container{
+.attractions-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-/* 
-replaced with javascript function for exercise  */
 
-/* .image:hover{
-     opacity: 0.75;
-     border:8px solid;
-     border-image: linear-gradient(45deg, red, black) 1
-} */
+.attractions-container.blur {
+    filter: blur(5px);
+}
+
+.modal-container {
+    position: fixed;
+    top: 10rem;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transform: scale(0);
+    transition: transform 300ms;
+}
+
+.modal-container.open {
+    /* opacity: 1; */
+    visibility: visible;
+    transform: scale(1);
+
+}
+
+.image {
+    width: 50%;
+}
+
+
+
+.closebtn {
+    /* citation:https://stackoverflow.com/questions/10019797/pure-css-close-button */
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 30px;
+    background: #232324;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+    position: relative;
+    top: -28.5rem;
+    left: 45rem;
+    cursor: pointer;
+}
+
+.previous-btn, .next-btn {
+    position: relative;
+    color: #fff;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 30px 6px;
+    cursor: pointer;
+}
+
+.previous-btn:hover, .next-btn:hover {
+    background-color: #232324;
+}
+
+.previous-btn {
+    left: -45rem;
+    top: -14.5rem;
+}
+
+.next-btn {
+    left: -5rem;
+    top: -14.5rem;
+}

@@ -11,91 +11,112 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
-    <h1>Tourist Attractions in St. Louis</h1>
+<body onload="addEffects()">
 
-    <div class="attractions-container">
+   
 
-        <div class="attractions">
-            <h2>Gateway Arch</h2>
-            <img src="./imgs/missouri-st-louis-gateway-arch-night.jpg" alt="Gateway Arch" class="image" >
-        </div>
-    
-    
-        <div class="attractions">
-            <h2> Old Courthouse</h2>
-            <img src="./imgs/missouri-st-louis-old-courthouse.jpg" alt="Old Courthouse" class="image">
-        </div>
-    
-        <div class="attractions">
-            <h2>Missouri Botanical Garden</h2>
-            <img src="./imgs/missouri-st-louis-botanical-garden.jpg" alt="Missouri Botanical Garden" class="image">
-        </div>
-    
-    
-        <div class="attractions">
-            <h2>Forest Park</h2>
-            <img src="./imgs/missouri-st-louis-forest-park.jpg" alt="Forest Park" class="image">
-        </div>
-    
-        <div class="attractions">
-            <h2>Saint Louis Zoo</h2>
-            <img src="./imgs/missouri-st-louis-top-attractions-st-louis-zoo.jpg" alt="Saint Louis Zoo" class="image">
-        </div>
-    
-        <div class="attractions">
-            <h2>Magic House, St. Louis Children's Museum</h2>
-            <img src="./imgs/missouri-st-louis-magic-house.jpg" alt="Magic House, St. Louis Children's Museum" class="image">
-        </div>
-    
-        <div class="attractions">
-            <h2> City Museum</h2>
-            <img src="./imgs/missouri-st-louis-city-museum.jpg" alt="City Museum" class="image">
-        </div>
-    
-        <div class="attractions">
-            <h2>Market Street</h2>
-            <img src="./imgs/missouri-st-louis-market-street.jpg" alt="Market Street" class="image">
-        </div>
-    
-        <div class="attractions">
-            <h2>Old Cathedral (Basilica of St. Louis, King)</h2>
-            <img src="./imgs/missouri-st-louis-old-cathedral.jpg" alt="Old Cathedral (Basilica of St. Louis, King)" class="image">
-        </div>
-    
-        <div class="attractions">
-            <h2>Scott Joplin House</h2>
-            <img src="./imgs/missouri-st-louis-scott-joplin-house.jpg" alt="Scott Joplin House" class="image">
-        </div>
-    
-        <div class="attractions">
-            <h2>Campbell House Museum</h2>
-            <img src="./imgs/missouri-st-louis-campbell-house-museum.jpg" alt="Campbell House Museum" class="image">
-        </div>
-    
-        <div class="attractions">
-            <h2>Laumeier Sculpture Park</h2>
-            <img src="./imgs/missouri-st-louis-laumeier-sculpture-park.jpg" alt="Laumeier Sculpture Park" class="image">
-        </div>
+        
+
+        <div class="attractions-container">
+            <h1>Tourist Attractions in St. Louis</h1>
+            <div class="attractions">
+                <h2>Gateway Arch</h2>
+                <img src="./imgs/missouri-st-louis-gateway-arch-night.jpg" alt="Gateway Arch" class="image" id="0">
+            </div>
 
 
-        <!-- display the enlarged image  -->
-        <div class="container">
-            <!-- change to a function later  -->
-            <span onclick="collapseImage(this)" class="closebtn">&times;</span>
+            <div class="attractions">
+                <h2> Old Courthouse</h2>
+                <img src="./imgs/missouri-st-louis-old-courthouse.jpg" alt="Old Courthouse" class="image" id="1">
+            </div>
 
-            <!-- set width in css later -->
-            <img id="biggerImage" style="width:100%"> 
-            <div id="imgtext"></div>
-          </div>
-    
+            <div class="attractions">
+                <h2>Missouri Botanical Garden</h2>
+                <img src="./imgs/missouri-st-louis-botanical-garden.jpg" alt="Missouri Botanical Garden" class="image" id="2">
+            </div>
+
+
+            <div class="attractions">
+                <h2>Forest Park</h2>
+                <img src="./imgs/missouri-st-louis-forest-park.jpg" alt="Forest Park" class="image" id="3">
+            </div>
+
+            <div class="attractions">
+                <h2>Saint Louis Zoo</h2>
+                <img src="./imgs/missouri-st-louis-top-attractions-st-louis-zoo.jpg" alt="Saint Louis Zoo"
+                    class="image" id="4">
+            </div>
+
+            <div class="attractions">
+                <h2>Magic House, St. Louis Children's Museum</h2>
+                <img src="./imgs/missouri-st-louis-magic-house.jpg" alt="Magic House, St. Louis Children's Museum"
+                    class="image" id="5">
+            </div>
+
+            <div class="attractions">
+                <h2> City Museum</h2>
+                <img src="./imgs/missouri-st-louis-city-museum.jpg" alt="City Museum" class="image" id="6">
+            </div>
+
+            <div class="attractions">
+                <h2>Market Street</h2>
+                <img src="./imgs/missouri-st-louis-market-street.jpg" alt="Market Street" class="image" id="7">
+            </div>
+
+            <div class="attractions">
+                <h2>Old Cathedral (Basilica of St. Louis, King)</h2>
+                <img src="./imgs/missouri-st-louis-old-cathedral.jpg" alt="Old Cathedral (Basilica of St. Louis, King)"
+                    class="image" id="8">
+            </div>
+
+            <div class="attractions">
+                <h2>Scott Joplin House</h2>
+                <img src="./imgs/missouri-st-louis-scott-joplin-house.jpg" alt="Scott Joplin House" class="image" id="9">
+            </div>
+
+            <div class="attractions">
+                <h2>Campbell House Museum</h2>
+                <img src="./imgs/missouri-st-louis-campbell-house-museum.jpg" alt="Campbell House Museum" class="image" id="10">
+            </div>
+
+            <div class="attractions">
+                <h2>Laumeier Sculpture Park</h2>
+                <img src="./imgs/missouri-st-louis-laumeier-sculpture-park.jpg" alt="Laumeier Sculpture Park"
+                    class="image" id="11">
+            </div>
+
+        
+
+
+
+
+
     </div>
 
-  
 
+    <!-- display the enlarged image  -->
+    <div class="modal-container">
+
+        <div class="modal-content">
+
+            <span onclick="collapseImage()" class="closebtn">&times;</span>
+
+            
+            <img id="modal-image">
+
+
+            <!-- left and right buttons  -->
+            <a class="previous-btn" onclick="previousImage()"> &#10094; </a>
+            <a class="next-btn" onclick="nextImage()">&#10095;</a>
+
+        </div>
+
+    </div>
 
 
     <script src="./script.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-1.12.3.js"
+        integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc=" crossorigin="anonymous"></script>
 </body>
 
 </html>
